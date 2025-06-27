@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dosthugaallu Mandi</title>
+  <link rel="icon" href="/Main/Images/Bg-Logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="slide-header">
+    <nav>
+      <a href="#">Welcome</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="logo-container">
+      <img class="spin-img" src="/Main/Images/Spin Image.png" alt="Dosthugaallu Mandi" />
+      <img class="diplay-name" src="/Main/Images/Bg-Logo.png" alt="Dosthugaallu Mandi" />
+    </div>
+
+    <h1 class="tagline">Where Love Meets Taste on Every Plate.</h1>
+
+    <div class="about-us">
+      <img class="description-img" src="/Main/Images/unnamed.webp" alt="Restaurant Image" />
+      <div class="about-us-matter">
+        <h2>About Us</h2>
+        <p>
+          Dosthugaallu Mandi & Restaurant, Kukatpally, Hyderabad – A top‑rated casual dining hotspot (4.4★, 600+ reviews), praised for its authentic, juicy Mandi, cozy ambience, and friendly, prompt service. Open daily 12 PM–2 AM, with affordable meal options. Also offers seafood, fast food, dine‑in and takeaway.
+        </p>
+      </div>
+    </div>
+
+    <div class="branches">
+      <h2>Our Branches</h2>
+      <div>
+        <div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.1978244085003!2d78.40786257462936!3d17.498067599608316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9198df0d179f%3A0xc1c71bc5e04507de!2sDosthugaallu%20Mandi%20%26%20Restaurant!5e0!3m2!1sen!2sin!4v1751020027807!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <h3>Kukatpally Allwyn Colony Branch</h3>
+        </div>
+        <div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.4080522095173!2d78.38048157462912!3d17.48802409989923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f3ba45abfb%3A0xe38f710842df8f27!2sDosthugaallu%20Mandi%20%26%20Restaurant%20KPHB!5e0!3m2!1sen!2sin!4v1751020196722!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <h3>KPHB Phase 6 Branch</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="happy-customers">
+      <h3>Happy Customers</h3>
+      <div class="happy-img">
+        <div class="slider-track">
+          <img src="/Main/Images/1.webp" alt="Customer Image" />
+          <img src="/Main/Images/2.webp" alt="Customer Image" />
+          <img src="/Main/Images/3.webp" alt="Customer Image" />
+          <img src="/Main/Images/4.webp" alt="Customer Image" />
+          <img src="/Main/Images/5.webp" alt="Customer Image" />
+          <img src="/Main/Images/1.webp" alt="Customer Image" />
+          <img src="/Main/Images/2.webp" alt="Customer Image" />
+          <img src="/Main/Images/3.webp" alt="Customer Image" />
+          <img src="/Main/Images/4.webp" alt="Customer Image" />
+          <img src="/Main/Images/5.webp" alt="Customer Image" />
+        </div>
+      </div>
+    </div>
+  </main>
+    <script>
+        const observedSections = document.querySelectorAll('.about-us, .branches, .happy-customers');
+        const observer = new IntersectionObserver(entries => {
+         entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add(entry.target.classList.contains('happy-customers') ? 'visible-up' : 'animate');
+            }
+            });
+        }, { threshold: 0.3 });
+
+        observedSections.forEach(section => observer.observe(section));
+    </script>
+
+</body>
+</html>
