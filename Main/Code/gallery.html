@@ -26,12 +26,12 @@
         <nav>
             <a href="/Main/Code/index.html">Welcome</a>
             <a href="/Main/Code/gallery.html">Gallery</a>
-            <a href="#">Contact Us</a>
+            <a href="/Main/Code/contactus.html">Contact Us</a>
         </nav>
     </header>
 
     <!-- Main gallery section -->
-    <section class="gallery-section">
+    <section  id="gallery" class="gallery-section">
         <!-- Container for the grid layout -->
         <div class="gallery-grid">
 
@@ -168,4 +168,12 @@
         </div>
     </footer>
 </body>
+<script>
+  window.addEventListener('load', () => {
+    // Delay to match header animation (1.2s slideDown + 0.8s fadeInNav)
+    setTimeout(() => {
+      document.getElementById('gallery').classList.add('show');
+    }, 2000); // Adjust this value to match your total header animation duration
+  });
+</script>
 </html>
