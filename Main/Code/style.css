@@ -14,7 +14,7 @@ header {
   text-align: center;
 }
 .title-main{
-  color: #FFD1D1;
+  color: #ffffff;
   font-size: 4rem;
 }
 
@@ -40,10 +40,24 @@ header {
     opacity: 1;
   }
 }
+@keyframes fadeInNavBrand {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .nav-brand {
   display: flex;
   align-items: center;
   margin-right: 0rem;
+    opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInNavBrand 1s ease-out forwards;
+  animation-delay: 1.2s;
 }
 
 .nav-logo {
@@ -70,7 +84,7 @@ header {
 }
 .contact-line {
   font-size: 1.1rem;
-  color: #FFD1D1;
+  color: #ffffff;
   text-decoration: none;
   margin-top: 0.25rem;
   transition: color 0.3s ease;
@@ -426,7 +440,7 @@ nav a:hover {
 .footer-social h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #e67300;
+  color: #ffffff;
 }
 
 .footer-links ul {
@@ -528,7 +542,7 @@ nav a:hover {
 .franchise-heading {
     text-align: center;
     font-size: 2rem;
-    color: #e94e1b;
+    color: #4B1C1C;
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-weight: bold;
@@ -549,7 +563,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff7f0;
+    background-color: #FFD1D1;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     padding: 40px;
@@ -585,7 +599,7 @@ nav a:hover {
 .fill-form {
     text-align: center;
     font-size: 1.8rem;
-    color: #e94e1b;
+    color: #4B1C1C;
     margin-bottom: 25px;
     font-weight: bold;
 }
@@ -611,7 +625,7 @@ form input {
 }
 
 form input:focus {
-    border-color: #e94e1b;
+    border-color: #4B1C1C;
     outline: none;
 }
 
@@ -619,7 +633,7 @@ form input:focus {
 form button {
     margin-top: 20px;
     padding: 12px;
-    background-color: #e94e1b;
+    background-color: #4B1C1C;
     color: white;
     font-weight: bold;
     border: none;
@@ -633,3 +647,199 @@ form button:hover {
     background-color: #cc3f14;
 }
 
+/* Responsive Styles for Tablets and Mobiles */
+@media (max-width: 1024px) {
+  .title-main {
+    font-size: 3rem;
+  }
+
+  .tagline {
+    font-size: 2rem;
+  }
+
+  .nav-bar-content a,
+  .nav-bar-contents a {
+    margin: 0 1rem;
+    font-size: 1rem;
+  }
+
+  .brand-text,
+  .contact-info {
+    margin-left: 1rem;
+  }
+
+  .form-main {
+    gap: 80px;
+    padding: 30px;
+  }
+
+  .form-logo img {
+    max-width: 280px;
+  }
+
+  .form-container {
+    padding: 25px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-main {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.8rem;
+    margin-bottom: 60px;
+  }
+
+  .nav-brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand-text,
+  .contact-info {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-bar-content,
+  .nav-bar-contents {
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .nav-bar-content a,
+  .nav-bar-contents a {
+    display: block;
+    margin: 1rem 0;
+  }
+
+  .logo-container {
+    flex-direction: column;
+  }
+
+  .spin-img {
+    height: 240px;
+  }
+
+  .diplay-name {
+    height: 150px;
+  }
+
+  .about-us {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .about-us-matter h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-us-matter p {
+    font-size: 1rem;
+  }
+
+  .branches > div {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .happy-customers h3 {
+    font-size: 1.6rem;
+  }
+
+  .slider-track img {
+    height: 150px;
+  }
+
+  .gallery-section h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .form-main {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .form-logo img {
+    max-width: 220px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .fill-form {
+    font-size: 1.5rem;
+  }
+
+  form input,
+  form button {
+    font-size: 0.95rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-main {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+  }
+
+  .nav-logo {
+    height: 80px;
+  }
+
+  .about-us-matter h2 {
+    font-size: 1.4rem;
+  }
+
+  .branches h2,
+  .happy-customers h3,
+  .gallery-section h2,
+  .franchise-heading {
+    font-size: 1.5rem;
+  }
+
+  .gallery-card img {
+    height: 160px;
+  }
+
+  .form-logo img {
+    max-width: 180px;
+  }
+
+  .fill-form {
+    font-size: 1.3rem;
+  }
+
+  form button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
