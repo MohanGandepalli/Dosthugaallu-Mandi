@@ -13,15 +13,11 @@ body {
 header {
   text-align: center;
 }
-.title-main{
-  color: #FFD1D1;
-  font-size: 4rem;
-}
 
 .slide-header {
-  background-color: #4B1C1C;
-  color: ffffff;
-  padding: 1.5rem 1rem 5rem;
+  background-color: #fff3e6;
+  color: black;
+  padding: 3rem 1rem 5rem;
   position: relative;
   animation: slideDown 1.2s ease-out forwards;
   clip-path: ellipse(150% 100% at 50% 0%);
@@ -40,57 +36,12 @@ header {
     opacity: 1;
   }
 }
-.nav-brand {
-  display: flex;
-  align-items: center;
-  margin-right: 0rem;
-}
 
-.nav-logo {
-  height: 130px;
-  margin-left: 0.5rem;
-  width: auto;
-    border-radius: 50%;
-}
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  margin-left: 4rem;
-}
-.contact-info {
-  margin-left: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  font-size: 1.1rem;
-  white-space: nowrap;
-}
-.contact-info a{
-  font-size: small;
-}
-.contact-line {
-  font-size: 1.1rem;
-  color: #FFD1D1;
-  text-decoration: none;
-  margin-top: 0.25rem;
-  transition: color 0.3s ease;
-}
-.contact-line:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-.nav-bar-content{
+nav {
   opacity: 0;
   animation: fadeInNav 0.8s ease-in forwards;
   animation-delay: 1.4s;
-  margin: 1rem 0;
-}
-.nav-bar-contents{
-  opacity: 0;
-  animation: fadeInNav 0.8s ease-in forwards;
-  animation-delay: 1.4s;
-  margin: 3rem 0;
+  margin: 5rem 0;
 }
 
 @keyframes fadeInNav {
@@ -98,25 +49,17 @@ header {
   to { opacity: 1; }
 }
 
-.nav-bar-content a {
+nav a {
   margin: 0 3rem;
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: none;
-  color: #ffffff;
-  transition: 0.3s ease;
-}
-.nav-bar-contents a {
-  margin: 0 3rem;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-decoration: none;
-  color: #ffffff;
+  color: black;
   transition: 0.3s ease;
 }
 
 nav a:hover {
-  color: #FFD1D1;
+  color: #cc0066;
 }
 
 .logo-container {
@@ -125,29 +68,15 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 10px;
+  margin-top: -150px;
   z-index: 2;
 }
 
 .spin-img {
-  height: 380px;
-  margin-top: 1rem;
+  height: 400px;
   opacity: 0;
-  animation: fadeInSpin 1s ease-in forwards, spin 2s linear infinite;
+  animation: fadeInSpin 1s ease-in forwards, spin 3s linear infinite;
   animation-delay: 2.2s, 2.2s;
-}
-.spin-img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: conic-gradient(rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
-  mix-blend-mode: lighten;
-  filter: blur(50px);
-  opacity: 0.6;
-  pointer-events: none;
 }
 
 @keyframes spin {
@@ -157,7 +86,7 @@ nav a:hover {
 
 @keyframes fadeInSpin {
   from { opacity: 0.2; }
-  to { opacity: 0.95; }
+  to { opacity: 0.8; }
 }
 
 .diplay-name {
@@ -179,7 +108,7 @@ nav a:hover {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 100px;
-  background: linear-gradient(90deg, #4B1C1C, #cc0066);
+  background: linear-gradient(90deg, #e67300, #cc0066);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
@@ -216,7 +145,7 @@ nav a:hover {
   width: 98vw;
   margin: 4rem auto;
   padding: 4rem 2rem;
-  background-color: #4B1C1C;
+  background-color: #fffaf5;
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
@@ -244,7 +173,7 @@ nav a:hover {
 .about-us-matter h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #FFD1D1;
+  color: #e67300;
 }
 
 .about-us-matter h2::after {
@@ -260,13 +189,13 @@ nav a:hover {
 .about-us-matter p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #ffffff;
+  color: #444;
 }
 
 .branches {
   margin: 3rem auto;
   padding: 3rem 2rem;
-  background-color: #4B1C1C;
+  background-color: #fff3e6;
   border-radius: 1rem;
   width: 98vw;
   text-align: center;
@@ -276,11 +205,10 @@ nav a:hover {
 .branches h2 {
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
-  /* background: linear-gradient(to right, #FFD1D1, #cc0066);
+  background: linear-gradient(to right, #ff6a00, #cc0066);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent; */
-  color: #FFD1D1;
+  color: transparent;
 }
 
 .branches > div {
@@ -293,7 +221,7 @@ nav a:hover {
 .branches > div > div {
   flex: 1 1 300px;
   max-width: 500px;
-  background: #ffffff;
+  background: white;
   border-radius: 20px;
   overflow: hidden;
   padding-bottom: 1.5rem;
@@ -310,13 +238,13 @@ nav a:hover {
 .branches h3 {
   margin-top: 1rem;
   font-size: 1.2rem;
-  color: #4B1C1C;
+  color: #333;
 }
 
 .happy-customers {
   margin: 4rem auto;
   padding: 4rem 2rem;
-  background-color: #4B1C1C;
+  background-color: #fffaf5;
   text-align: center;
   border-radius: 1rem;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
@@ -334,8 +262,8 @@ nav a:hover {
 
 .happy-customers h3 {
   font-size: 2rem;
-  color: #FFD1D1;
-  margin-bottom: 3rem;
+  color: #cc0066;
+  margin-bottom: 2rem;
 }
 
 .happy-img {
@@ -383,10 +311,10 @@ nav a:hover {
   }
 }
 .site-footer {
-  background-color: #4B1C1C;
+  background-color: #fff3e6;
   padding: 3rem 2rem 1rem;
   font-family: 'Playfair Display', serif;
-  color: #FFD1D1;
+  color: #333;
   margin-top: 4rem;
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
 }
@@ -412,7 +340,7 @@ nav a:hover {
 
 .footer-brand p {
   font-size: 1.1rem;
-  color: #FFD1D1;
+  color: #444;
 }
 
 .footer-links,
@@ -426,7 +354,7 @@ nav a:hover {
 .footer-social h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #e67300;
+  color: #cc0066;
 }
 
 .footer-links ul {
@@ -440,7 +368,7 @@ nav a:hover {
 
 .footer-links a {
   text-decoration: none;
-  color: #FFD1D1;
+  color: #333;
   transition: color 0.3s ease;
 }
 
@@ -473,7 +401,7 @@ nav a:hover {
   padding-top: 1rem;
   border-top: 1px solid #ddd;
   font-size: 0.95rem;
-  color: #fff;
+  color: #777;
 }
 
 
@@ -633,3 +561,8 @@ form button:hover {
     background-color: #cc3f14;
 }
 
+
+
+
+
+I want you to replace all colors with light merun and biege
