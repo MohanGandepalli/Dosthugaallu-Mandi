@@ -566,3 +566,23 @@ form button:hover {
 
 
 I want you to replace all colors with light merun and biege
+
+
+
+/* Mobile nav hidden by default */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: #4B1C1C;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+}
+
+/* Show mobile menu when .show is toggled */
+.mobile-nav.show {
+  display: flex;
+}
